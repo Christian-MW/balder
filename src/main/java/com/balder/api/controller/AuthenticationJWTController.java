@@ -41,6 +41,7 @@ public class AuthenticationJWTController {
     private Long EXPIRATION_TIME;
     
     @GetMapping(value = "/token")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<UserDetails> authenticate() {
     	log.debug("token services");
         UserDetails userDetails = new UserDetails();

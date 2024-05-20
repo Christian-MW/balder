@@ -3,7 +3,7 @@ package com.balder.api.dto.request;
 public class ChatGPTRequest {
 	private String prompt;
 	private String message;
-	private String type;
+	private String token;
 	
 	public String getPrompt() {
 		return prompt;
@@ -17,10 +17,11 @@ public class ChatGPTRequest {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	public String getType() {
-		return type;
+	public String getToken() {
+		return token;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setToken(String token) {
+		this.token = token;
 	}
+	
 }

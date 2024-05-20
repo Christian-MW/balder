@@ -36,7 +36,7 @@ public class ChatGPTImpl implements ChatGPTService {
 		try {
 			String Allmessage = request.getPrompt() + " \n" + request.getMessage();
 			String url = URL_CHATGPT_MESSAGE_V1;
-			String token = "";
+			String token = "Bearer " + request.getToken();
 			
 			java.net.HttpURLConnection con = (java.net.HttpURLConnection) new java.net.URL(url).openConnection();
 	        con.setRequestMethod("POST");
